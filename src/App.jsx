@@ -1,12 +1,14 @@
+import Home from "./components/Home"
 import { Button } from "./components/ui/button"
+import { Routes, Route } from "react-router-dom";
+
 
 function App() {
   return (
     <>
-      <h1 className="">Hello World</h1>
-      <div className="p-2">
-      <Button>Hello</Button>
-      </div>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+    </Routes>
     </>
   )
 }
