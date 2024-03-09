@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import { SignInButton } from '@clerk/clerk-react';
 
 const Home = () => {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-    <header className="px-4 lg:px-6 h-14 flex items-center">
+
+        <header className="px-4 lg:px-6 h-14 flex items-center">
       <Link className="flex items-center justify-center" to="#">
         Logo
         <span className="sr-only">Acme Inc</span>
@@ -27,6 +29,9 @@ const Home = () => {
           Contact
         </Link>
       </nav>
+      <SignInButton className="mx-2" mode='modal' redirectUrl='/dashboard'>
+        <Button>Sign In</Button>
+      </SignInButton>
     </header>
     <main className="flex-1">
     <section className="w-full py-6 sm:py-12 md:py-24 lg:py-32 xl:py-48">
@@ -38,16 +43,6 @@ const Home = () => {
               </p>
             </div>
             <div className="mx-auto w-full max-w-sm space-y-2">
-              <form className="flex space-x-2">
-                <Input className="max-w-lg flex-1" placeholder="Enter your email" type="email" />
-                <Button type="submit">Sign Up</Button>
-              </form>
-              <p className="text-xs text-gray-500 dark:text-gray-400">
-                Sign up to get notified when we launch.
-                <Link className="underline underline-offset-2" href="#">
-                  Terms & Conditions
-                </Link>
-              </p>
             </div>
           </div>
         </section>
