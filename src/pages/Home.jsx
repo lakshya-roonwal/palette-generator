@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { SignInButton } from "@clerk/clerk-react";
 
@@ -40,6 +38,7 @@ const Home = () => {
             Contact
           </Link>
         </nav>
+
         <SignInButton className="mx-2" mode="modal" redirectUrl="/dashboard">
           <Button>Sign In</Button>
         </SignInButton>
