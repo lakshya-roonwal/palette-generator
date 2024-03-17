@@ -1,5 +1,5 @@
 
-# Pallate Generator
+# Palette Generator
 
 Explore infinite color combinations effortlessly with our Palette Generator. Craft the perfect color scheme for your project, whether you're a seasoned designer or just starting out. Unleash your creativity with ease and precision, and elevate your design game with our user-friendly tool.
 
