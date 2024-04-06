@@ -1,9 +1,7 @@
-import { UserButton, useClerk } from "@clerk/clerk-react";
-import React, { useState } from "react";
 import DashboardNavbar from "@/components/dashboard/DashboardNavbar";
-import { PopoverPicker } from "@/components/PopoverPicker";
-import PaletteContainer from "@/components/dashboard/PaletteContainer";
 import PaletteCard from "@/components/dashboard/home/PaletteCard";
+import { useClerk } from "@clerk/clerk-react";
+import { useState } from "react";
 
 const Dashboard = () => {
   const { user } = useClerk();
