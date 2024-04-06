@@ -1,21 +1,23 @@
-import React from 'react'
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 const PaletteCard = () => {
   return (
     <Card className="w-[400px]">
       <div className="flex items-center p-4">
         <div className="flex-1">
           <h2 className="text-lg font-semibold">New Blog Post</h2>
-          <p className="text-sm text-gray-500 dark:text-gray-400">Created 2 days ago</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            Created 2 days ago
+          </p>
         </div>
         <Button size="icon" variant="ghost">
           <ChevronRightIcon className="h-4 w-4" />
         </Button>
       </div>
     </Card>
-  )
-}
+  );
+};
 function ChevronRightIcon(props) {
   return (
     <svg
@@ -32,8 +34,7 @@ function ChevronRightIcon(props) {
     >
       <path d="m9 18 6-6-6-6" />
     </svg>
-  )
+  );
 }
 
-export default PaletteCard
-
+export default PaletteCard;
