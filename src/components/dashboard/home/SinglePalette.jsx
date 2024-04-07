@@ -9,14 +9,15 @@ const SinglePalette = () => {
 
   return (
     <div>
-      <Tabs defaultValue="account" className="w-full">
+      <Tabs defaultValue="overview" className="w-full">
         <SinglePaletteNav />
         SinglePalette
         <h1>The Palette id is {params._id}</h1>
-        <TabsContent value="account">
+        <TabsContent value="overview">
           Make changes to your account here.
         </TabsContent>
-        <TabsContent value="password">Change your password here.</TabsContent>
+        <TabsContent value="apikey">Change your password here.</TabsContent>
+        <TabsContent value="settings">Settings</TabsContent>
       </Tabs>
     </div>
   );
