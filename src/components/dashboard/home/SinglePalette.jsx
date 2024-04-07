@@ -2,6 +2,9 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import SinglePaletteNav from "../singlepalette/SinglePaletteNav";
 import { Tabs,TabsContent } from "@/components/ui/tabs";
+import PaletteOverview from "../singlepalette/PaletteOverview";
+import PaletteAPI from "../singlepalette/PaletteAPI";
+import PaletteSettings from "../singlepalette/PaletteSettings";
 
 const SinglePalette = () => {
   const params = useParams();
@@ -11,13 +14,11 @@ const SinglePalette = () => {
     <div>
       <Tabs defaultValue="overview" className="w-full">
         <SinglePaletteNav />
-        SinglePalette
-        <h1>The Palette id is {params._id}</h1>
         <TabsContent value="overview">
-          Make changes to your account here.
+          <PaletteOverview/>
         </TabsContent>
-        <TabsContent value="apikey">Change your password here.</TabsContent>
-        <TabsContent value="settings">Settings</TabsContent>
+        <TabsContent value="apikey"><PaletteAPI/></TabsContent>
+        <TabsContent value="settings"><PaletteSettings/></TabsContent>
       </Tabs>
     </div>
   );

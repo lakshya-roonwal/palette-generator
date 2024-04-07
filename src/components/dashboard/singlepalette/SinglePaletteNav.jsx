@@ -1,7 +1,4 @@
-import React from "react";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+import { TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const SinglePaletteNav = () => {
   return (
@@ -11,7 +8,6 @@ const SinglePaletteNav = () => {
           <TabsTrigger  value="apikey">API Key</TabsTrigger>
           <TabsTrigger  value="settings">Settings</TabsTrigger>
         </TabsList>
-        <Separator/>
     </div>
   );
 };
