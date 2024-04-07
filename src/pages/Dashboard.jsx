@@ -25,7 +25,7 @@ const Dashboard = () => {
                 />
               }
             />
-            <Route path="/singlepalette" element={<SinglePalette />} />
+            <Route path="/singlepalette/:_id" element={<SinglePalette />} />
           </Routes>
         </main>
       </div>
