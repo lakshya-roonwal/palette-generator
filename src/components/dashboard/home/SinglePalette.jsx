@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const SinglePalette = () => {
-  return (
-    <div>SinglePalette</div>
-  )
-}
+  return <div>SinglePalette</div>;
+};
 
-export default SinglePalette
+export default SinglePalette;
