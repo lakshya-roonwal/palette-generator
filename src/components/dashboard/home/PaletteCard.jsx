@@ -6,7 +6,7 @@ const PaletteCard = () => {
     <Card className="w-[400px]">
       <div className="flex items-center p-4">
         <div className="flex-1">
-          <h2 className="text-lg font-semibold">New Blog Post</h2>
+          <h2 className="text-lg font-normal">New Blog Post</h2>
           <p className="text-sm text-gray-500 dark:text-gray-400">
             Created 2 days ago
           </p>
