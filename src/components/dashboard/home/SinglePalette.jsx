@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import SinglePaletteNav from "../singlepalette/SinglePaletteNav";
-import { Tabs,TabsContent } from "@/components/ui/tabs";
+import { Tabs, TabsContent } from "@/components/ui/tabs";
 import PaletteOverview from "../singlepalette/PaletteOverview";
 import PaletteAPI from "../singlepalette/PaletteAPI";
 import PaletteSettings from "../singlepalette/PaletteSettings";
@@ -15,10 +15,14 @@ const SinglePalette = () => {
       <Tabs defaultValue="overview" className="w-full">
         <SinglePaletteNav />
         <TabsContent value="overview">
-          <PaletteOverview/>
+          <PaletteOverview />
         </TabsContent>
-        <TabsContent value="apikey"><PaletteAPI/></TabsContent>
-        <TabsContent value="settings"><PaletteSettings/></TabsContent>
+        <TabsContent value="apikey">
+          <PaletteAPI />
+        </TabsContent>
+        <TabsContent value="settings">
+          <PaletteSettings />
+        </TabsContent>
       </Tabs>
     </div>
   );

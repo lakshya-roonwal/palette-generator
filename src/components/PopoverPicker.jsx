@@ -17,14 +17,11 @@ export const PopoverPicker = ({
   return (
     <div className="relative">
       <div
-        className="w-[28px] h-[28px] rounded-sm cursor-pointer "
+        className="w-[28px] h-[28px] cursor-pointer z-10 size-4 rounded-full ring-primary ring-offset-2 ring-offset-background transition-shadow hover:ring-1"
         style={{
           width: width,
           height: height,
           backgroundColor: color,
-          border: "3px solid #fff",
-          boxShadow:
-            "0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(0, 0, 0, 0.1)",
         }}
         onClick={() => toggle(true)}
       />
@@ -35,7 +32,7 @@ export const PopoverPicker = ({
             top: "calc(100%+2px)",
             boxShadow: "0 6px 12px rgba(0, 0, 0, 0.15)",
           }}
-          className="absolute left-0 rounded-sm"
+          className="absolute left-0 rounded-sm z-20"
           ref={popover}
         >
           <HexAlphaColorPicker color={color} onChange={onChange} />
