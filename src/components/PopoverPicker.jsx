@@ -17,7 +17,7 @@ export const PopoverPicker = ({
   return (
     <div className="relative">
       <div
-        className="w-[28px] h-[28px] cursor-pointer z-10 size-4 rounded-full ring-primary ring-offset-2 ring-offset-background transition-shadow hover:ring-1"
+        className="w-[28px] h-[28px] shadow-md cursor-pointer z-10 size-4 rounded-full ring-primary ring-offset-2 ring-offset-background transition-shadow hover:ring-1"
         style={{
           width: width,
           height: height,
