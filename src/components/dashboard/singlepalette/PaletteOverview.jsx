@@ -96,6 +96,7 @@ const PaletteOverview = () => {
                     return null;
                   })}
               </div>
+          <Separator />
             </div>
           </section>
 
@@ -131,6 +132,7 @@ const PaletteOverview = () => {
                     return null;
                   })}
               </div>
+              <Separator />
             </div>
           </section>
 
@@ -166,6 +168,7 @@ const PaletteOverview = () => {
                     return null;
                   })}
               </div>
+              <Separator />
             </div>
           </section>
 
