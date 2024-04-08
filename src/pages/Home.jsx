@@ -40,12 +40,14 @@ const Home = () => {
           </Link>
         </nav>
         <SignedIn>
-          <Button className="mx-2">Dashboard</Button>
+          <Button className="mx-2" asChild={true}>
+            <Link to={"/dashboard"}>Dashboard</Link>
+          </Button>
         </SignedIn>
         <SignedOut>
-        <SignInButton className="mx-2" mode="modal" redirectUrl="/dashboard">
-          <Button>Sign In</Button>
-        </SignInButton>
+          <SignInButton className="mx-2" mode="modal" redirectUrl="/dashboard">
+            <Button>Sign In</Button>
+          </SignInButton>
         </SignedOut>
       </header>
       <main className="flex-1">

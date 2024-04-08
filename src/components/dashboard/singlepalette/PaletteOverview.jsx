@@ -64,7 +64,7 @@ const PaletteOverview = () => {
         </div>
         {/* Colors Section */}
         <div>
-        {/* Primary Color */}
+          {/* Primary Color */}
           <section className="w-full py-6">
             <div className="container grid items-start gap-6 px-4 md:px-6">
               <div className="space-y-1">
@@ -73,25 +73,28 @@ const PaletteOverview = () => {
                 </h2>
               </div>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
-                {Object.entries(sampleData.palette).slice(0,4).map(([key, value]) => {
-                  // Exclude non-color properties and ID fields
-                  if (
-                    typeof value === "string" &&
-                    key !== "_id" &&
-                    key !== "name"
-                  ) {
-                    return (
-                      <div
-                        key={key}
-                        className="flex items-center gap-2 "
-                      >
-                        <PopoverPicker width="30px" height="30px" color={value} />
-                        <span>{key}</span>: <span>{value}</span>
-                      </div>
-                    );
-                  }
-                  return null;
-                })}
+                {Object.entries(sampleData.palette)
+                  .slice(0, 4)
+                  .map(([key, value]) => {
+                    // Exclude non-color properties and ID fields
+                    if (
+                      typeof value === "string" &&
+                      key !== "_id" &&
+                      key !== "name"
+                    ) {
+                      return (
+                        <div key={key} className="flex items-center gap-2 ">
+                          <PopoverPicker
+                            width="30px"
+                            height="30px"
+                            color={value}
+                          />
+                          <span>{key}</span>: <span>{value}</span>
+                        </div>
+                      );
+                    }
+                    return null;
+                  })}
               </div>
             </div>
           </section>
@@ -105,25 +108,28 @@ const PaletteOverview = () => {
                 </h2>
               </div>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
-              {Object.entries(sampleData.palette).slice(4,8).map(([key, value]) => {
-                  // Exclude non-color properties and ID fields
-                  if (
-                    typeof value === "string" &&
-                    key !== "_id" &&
-                    key !== "name"
-                  ) {
-                    return (
-                      <div
-                        key={key}
-                        className="flex items-center gap-2 "
-                      >
-                        <PopoverPicker width="30px" height="30px" color={value} />
-                        <span>{key}</span>: <span>{value}</span>
-                      </div>
-                    );
-                  }
-                  return null;
-                })}
+                {Object.entries(sampleData.palette)
+                  .slice(4, 8)
+                  .map(([key, value]) => {
+                    // Exclude non-color properties and ID fields
+                    if (
+                      typeof value === "string" &&
+                      key !== "_id" &&
+                      key !== "name"
+                    ) {
+                      return (
+                        <div key={key} className="flex items-center gap-2 ">
+                          <PopoverPicker
+                            width="30px"
+                            height="30px"
+                            color={value}
+                          />
+                          <span>{key}</span>: <span>{value}</span>
+                        </div>
+                      );
+                    }
+                    return null;
+                  })}
               </div>
             </div>
           </section>
@@ -137,25 +143,28 @@ const PaletteOverview = () => {
                 </h2>
               </div>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
-              {Object.entries(sampleData.palette).slice(8,11).map(([key, value]) => {
-                  // Exclude non-color properties and ID fields
-                  if (
-                    typeof value === "string" &&
-                    key !== "_id" &&
-                    key !== "name"
-                  ) {
-                    return (
-                      <div
-                        key={key}
-                        className="flex items-center gap-2 "
-                      >
-                        <PopoverPicker width="30px" height="30px" color={value} />
-                        <span>{key}</span>: <span>{value}</span>
-                      </div>
-                    );
-                  }
-                  return null;
-                })}
+                {Object.entries(sampleData.palette)
+                  .slice(8, 11)
+                  .map(([key, value]) => {
+                    // Exclude non-color properties and ID fields
+                    if (
+                      typeof value === "string" &&
+                      key !== "_id" &&
+                      key !== "name"
+                    ) {
+                      return (
+                        <div key={key} className="flex items-center gap-2 ">
+                          <PopoverPicker
+                            width="30px"
+                            height="30px"
+                            color={value}
+                          />
+                          <span>{key}</span>: <span>{value}</span>
+                        </div>
+                      );
+                    }
+                    return null;
+                  })}
               </div>
             </div>
           </section>
@@ -169,25 +178,28 @@ const PaletteOverview = () => {
                 </h2>
               </div>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
-              {Object.entries(sampleData.palette).slice(11,17).map(([key, value]) => {
-                  // Exclude non-color properties and ID fields
-                  if (
-                    typeof value === "string" &&
-                    key !== "_id" &&
-                    key !== "name"
-                  ) {
-                    return (
-                      <div
-                        key={key}
-                        className="flex items-center gap-2 "
-                      >
-                        <PopoverPicker width="30px" height="30px" color={value} />
-                        <span>{key}</span>: <span>{value}</span>
-                      </div>
-                    );
-                  }
-                  return null;
-                })}
+                {Object.entries(sampleData.palette)
+                  .slice(11, 17)
+                  .map(([key, value]) => {
+                    // Exclude non-color properties and ID fields
+                    if (
+                      typeof value === "string" &&
+                      key !== "_id" &&
+                      key !== "name"
+                    ) {
+                      return (
+                        <div key={key} className="flex items-center gap-2 ">
+                          <PopoverPicker
+                            width="30px"
+                            height="30px"
+                            color={value}
+                          />
+                          <span>{key}</span>: <span>{value}</span>
+                        </div>
+                      );
+                    }
+                    return null;
+                  })}
               </div>
             </div>
           </section>
