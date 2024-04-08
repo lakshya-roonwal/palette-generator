@@ -83,20 +83,30 @@ const PaletteOverview = () => {
                       key !== "name"
                     ) {
                       return (
-                        <div key={key} className="flex items-center gap-2 ">
-                          <PopoverPicker
-                            width="30px"
-                            height="30px"
-                            color={value}
-                          />
-                          <span>{key}</span>: <span>{value}</span>
+                        <div
+                          key={key}
+                          className="flex flex-col items-start gap-2 "
+                        >
+                          <h3 className="font-medium">{key}</h3>
+                          <div className="flex gap-2 max-w-sm items-center space-x-2 border border-gray-300 rounded-lg px-3 py-2 outline-none focus:outline-lime-300">
+                            <PopoverPicker
+                              width="30px"
+                              height="30px"
+                              color={value}
+                            />
+                            <input
+                              type="text"
+                              className="bg-transparent outline-none"
+                              value={value}
+                            />
+                          </div>
                         </div>
                       );
                     }
                     return null;
                   })}
               </div>
-          <Separator />
+              <Separator />
             </div>
           </section>
 
@@ -119,13 +129,23 @@ const PaletteOverview = () => {
                       key !== "name"
                     ) {
                       return (
-                        <div key={key} className="flex items-center gap-2 ">
-                          <PopoverPicker
-                            width="30px"
-                            height="30px"
-                            color={value}
-                          />
-                          <span>{key}</span>: <span>{value}</span>
+                        <div
+                          key={key}
+                          className="flex flex-col items-start gap-2 "
+                        >
+                          <h3 className="font-medium">{key}</h3>
+                          <div className="flex gap-2 max-w-sm items-center space-x-2 border border-gray-300 rounded-lg px-3 py-2 outline-none focus:outline-lime-300">
+                            <PopoverPicker
+                              width="30px"
+                              height="30px"
+                              color={value}
+                            />
+                            <input
+                              type="text"
+                              className="bg-transparent outline-none"
+                              value={value}
+                            />
+                          </div>
                         </div>
                       );
                     }
@@ -155,13 +175,23 @@ const PaletteOverview = () => {
                       key !== "name"
                     ) {
                       return (
-                        <div key={key} className="flex items-center gap-2 ">
-                          <PopoverPicker
-                            width="30px"
-                            height="30px"
-                            color={value}
-                          />
-                          <span>{key}</span>: <span>{value}</span>
+                        <div
+                          key={key}
+                          className="flex flex-col items-start gap-2 "
+                        >
+                          <h3 className="font-medium">{key}</h3>
+                          <div className="flex gap-2 max-w-sm items-center space-x-2 border border-gray-300 rounded-lg px-3 py-2 outline-none focus:outline-lime-300">
+                            <PopoverPicker
+                              width="30px"
+                              height="30px"
+                              color={value}
+                            />
+                            <input
+                              type="text"
+                              className="bg-transparent outline-none"
+                              value={value}
+                            />
+                          </div>
                         </div>
                       );
                     }
@@ -191,13 +221,23 @@ const PaletteOverview = () => {
                       key !== "name"
                     ) {
                       return (
-                        <div key={key} className="flex items-center gap-2 ">
-                          <PopoverPicker
-                            width="30px"
-                            height="30px"
-                            color={value}
-                          />
-                          <span>{key}</span>: <span>{value}</span>
+                        <div
+                          key={key}
+                          className="flex flex-col items-start gap-2 "
+                        >
+                          <h3 className="font-medium">{key}</h3>
+                          <div className="flex gap-2 max-w-sm items-center space-x-2 border border-gray-300 rounded-lg px-3 py-2 outline-none focus:outline-lime-300">
+                            <PopoverPicker
+                              width="30px"
+                              height="30px"
+                              color={value}
+                            />
+                            <input
+                              type="text"
+                              className="bg-transparent outline-none"
+                              value={value}
+                            />
+                          </div>
                         </div>
                       );
                     }
