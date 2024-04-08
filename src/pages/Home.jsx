@@ -1,4 +1,5 @@
 import React from "react";
+import { SignedIn, SignedOut } from "@clerk/clerk-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SignInButton } from "@clerk/clerk-react";
@@ -38,10 +39,14 @@ const Home = () => {
             Contact
           </Link>
         </nav>
-
+        <SignedIn>
+          <Button className="mx-2">Dashboard</Button>
+        </SignedIn>
+        <SignedOut>
         <SignInButton className="mx-2" mode="modal" redirectUrl="/dashboard">
           <Button>Sign In</Button>
         </SignInButton>
+        </SignedOut>
       </header>
       <main className="flex-1">
         <section className="w-full py-6 sm:py-12 md:py-24 lg:py-32 xl:py-48">
