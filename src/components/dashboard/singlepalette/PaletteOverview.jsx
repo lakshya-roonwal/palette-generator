@@ -57,7 +57,7 @@ const PaletteOverview = () => {
           <Button>Save</Button>
         </div>
       </div>
-      <Separator />
+      {/* <Separator /> */}
       <div className="flex flex-col w-full gap-4 p-4 sm:px-6 lg:px-8">
         <div className="flex items-center">
           <h1 className="text-lg font-semibold">Manage Colors</h1>
