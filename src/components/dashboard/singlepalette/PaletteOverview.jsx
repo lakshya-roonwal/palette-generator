@@ -72,7 +72,7 @@ const PaletteOverview = () => {
                   Primary
                 </h2>
               </div>
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
+              <div className="grid grid-cols-2 gap-4 md:grid-cols-2 xl:grid-cols-4 grid-flow-row">
                 {Object.entries(sampleData.palette)
                   .slice(0, 4)
                   .map(([key, value]) => {
@@ -88,7 +88,7 @@ const PaletteOverview = () => {
                           className="flex flex-col items-start gap-2 "
                         >
                           <h3 className="font-medium">{key}</h3>
-                          <div className="flex gap-2 max-w-sm items-center space-x-2 border border-gray-300 rounded-lg px-3 py-2 outline-none focus:outline-lime-300">
+                          <div className="flex gap-2 w-fit items-center border border-gray-300 rounded-lg px-3 py-2">
                             <PopoverPicker
                               width="30px"
                               height="30px"
@@ -96,7 +96,7 @@ const PaletteOverview = () => {
                             />
                             <input
                               type="text"
-                              className="bg-transparent outline-none"
+                              className="bg-transparent outline-none w-24 md:w-40"
                               value={value}
                             />
                           </div>
@@ -118,7 +118,7 @@ const PaletteOverview = () => {
                   Secondary
                 </h2>
               </div>
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
+              <div className="grid grid-cols-2 gap-4 md:grid-cols-2 xl:grid-cols-4">
                 {Object.entries(sampleData.palette)
                   .slice(4, 8)
                   .map(([key, value]) => {
@@ -142,7 +142,7 @@ const PaletteOverview = () => {
                             />
                             <input
                               type="text"
-                              className="bg-transparent outline-none"
+                              className="bg-transparent outline-none w-24 md:w-40"
                               value={value}
                             />
                           </div>
@@ -164,7 +164,7 @@ const PaletteOverview = () => {
                   Neutrals
                 </h2>
               </div>
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
+              <div className="grid grid-cols-2 gap-4 md:grid-cols-2 xl:grid-cols-4">
                 {Object.entries(sampleData.palette)
                   .slice(8, 11)
                   .map(([key, value]) => {
@@ -188,7 +188,7 @@ const PaletteOverview = () => {
                             />
                             <input
                               type="text"
-                              className="bg-transparent outline-none"
+                              className="bg-transparent outline-none w-24 md:w-40"
                               value={value}
                             />
                           </div>
@@ -210,7 +210,7 @@ const PaletteOverview = () => {
                   Utilities
                 </h2>
               </div>
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
+              <div className="grid grid-cols-2 gap-4 md:grid-cols-2 xl:grid-cols-4">
                 {Object.entries(sampleData.palette)
                   .slice(11, 17)
                   .map(([key, value]) => {
@@ -234,7 +234,7 @@ const PaletteOverview = () => {
                             />
                             <input
                               type="text"
-                              className="bg-transparent outline-none"
+                              className="bg-transparent outline-none w-24 md:w-40"
                               value={value}
                             />
                           </div>
