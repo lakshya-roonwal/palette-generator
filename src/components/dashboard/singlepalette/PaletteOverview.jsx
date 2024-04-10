@@ -53,7 +53,7 @@ const PaletteOverview = () => {
     <div>
       <div className="flex w-full px-4 sm:px-6 lg:px-8 justify-between">
         <div className="flex justify-between items-center w-full my-4">
-          <h2 className="text-2xl font-semibold">{sampleData.name}</h2>
+          <input className="text-2xl font-semibold bg-transparent" value={sampleData.name}/>
           <Button>Save</Button>
         </div>
       </div>
