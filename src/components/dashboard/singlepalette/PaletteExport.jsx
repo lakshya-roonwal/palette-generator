@@ -16,8 +16,9 @@ const PaletteExport = () => {
       <div className="mb-6 py-4">
         <h2 className="text-2xl font-semibold">Exports</h2>
       </div>
+      {/* TODO : Make it proper mobile responsive with scrollbar on the codeblock  */}
       {/* Copy Palette */}
-      <div className="">
+      <div className="overflow-hidden">
         <h2 className="text-xl font-semibold my-4">Copy Palette</h2>
         <div className="grid grid-cols-2 gap-6">
           <div>
@@ -69,15 +70,14 @@ const PaletteExport = () => {
       {/* Export Through API */}
       <div>
         <h2 className="text-xl font-semibold my-2">Through API Call</h2>
-        <div className="space-y-6">
+        <div className="space-y-6 overflow-hidden">
           <Tabs defaultValue="javascript">
             <TabsList className="flex gap-4">
               <TabsTrigger value="javascript">JavaScript</TabsTrigger>
               <TabsTrigger value="python">Python</TabsTrigger>
             </TabsList>
             <TabsContent value="javascript">
-              <div className="grid gap-2">
-                <pre className="p-4 text-sm rounded-lg bg-gray-50 dark:bg-gray-950">
+              <div className="">
                   <CodeBlock
                     codeString={`fetch('https://api.example.com/data', {
                   method: 'POST',
@@ -92,12 +92,10 @@ const PaletteExport = () => {
                 `}
                     language={"javascript"}
                   />
-                </pre>
               </div>
             </TabsContent>
             <TabsContent value="python">
-              <div className="grid gap-2">
-                <pre className="p-4 text-sm rounded-lg bg-gray-50 dark:bg-gray-950">
+              <div className="">
                   <CodeBlock
                     codeString={`import requests
                 
@@ -113,7 +111,6 @@ const PaletteExport = () => {
                 `}
                     language={"python"}
                   />
-                </pre>
               </div>
             </TabsContent>
           </Tabs>

@@ -8,15 +8,13 @@ const CodeBlock = ({ codeString, language }) => {
   const [copy, setcopy] = useState(false);
 
   return (
-    <div className="min-2-[25rem] bg-[#3a404d] rounded-md overflow-hidden">
+    <div className="min-w-[25rem] bg-[#3a404d] rounded-md overflow-hidden">
       <div className="flex justify-between px-4 text-white text-xs items-center">
-        <p className="text-sm"></p>
         {copy ? (
           <button className="py-1 inline-flex items-center gap-1">
             <span className="text-base mt-1">
               <ClipboardCheck size={"18px"} />
             </span>
-            Copied
           </button>
         ) : (
           <button
@@ -32,7 +30,6 @@ const CodeBlock = ({ codeString, language }) => {
             <span className="text-base mt-1">
               <Clipboard size={"18px"} />
             </span>
-            Copy Code
           </button>
         )}
       </div>
