@@ -78,8 +78,8 @@ const PaletteExport = () => {
             </TabsList>
             <TabsContent value="javascript">
               <div className="">
-                  <CodeBlock
-                    codeString={`fetch('https://api.example.com/data', {
+                <CodeBlock
+                  codeString={`fetch('https://api.example.com/data', {
                   method: 'POST',
                   headers: {
                     'Content-Type': 'application/json',
@@ -90,14 +90,14 @@ const PaletteExport = () => {
                   .then(response => response.json())
                   .then(data => console.log(data));
                 `}
-                    language={"javascript"}
-                  />
+                  language={"javascript"}
+                />
               </div>
             </TabsContent>
             <TabsContent value="python">
               <div className="">
-                  <CodeBlock
-                    codeString={`import requests
+                <CodeBlock
+                  codeString={`import requests
                 
                 url = 'https://api.example.com/data'
                 headers = {
@@ -109,8 +109,8 @@ const PaletteExport = () => {
                 response = requests.post(url, headers=headers, json=data)
                 print(response.json())
                 `}
-                    language={"python"}
-                  />
+                  language={"python"}
+                />
               </div>
             </TabsContent>
           </Tabs>

@@ -1,21 +1,24 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 const PaletteCard = () => {
   return (
-    <Card className="w-[400px]">
-      <div className="flex items-center p-4">
-        <div className="flex-1">
-          <h2 className="text-lg font-normal">New Blog Post</h2>
-          <p className="text-sm text-gray-500 dark:text-gray-400">
-            Created 2 days ago
-          </p>
+    <Link to={"/dashboard/singlepalette/12"}>
+      <Card className="w-[400px]">
+        <div className="flex items-center p-4">
+          <div className="flex-1">
+            <h2 className="text-lg font-normal">New Blog Post</h2>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              Created 2 days ago
+            </p>
+          </div>
+          <Button size="icon" variant="ghost">
+            <ChevronRightIcon className="h-4 w-4" />
+          </Button>
         </div>
-        <Button size="icon" variant="ghost">
-          <ChevronRightIcon className="h-4 w-4" />
-        </Button>
-      </div>
-    </Card>
+      </Card>
+    </Link>
   );
 };
 function ChevronRightIcon(props) {

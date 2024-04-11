@@ -11,49 +11,20 @@ import {
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { PopoverPicker } from "@/components/PopoverPicker";
+import { useSelector } from "react-redux";
 
 const PaletteOverview = () => {
-  const [sampleData, setSampleData] = useState({
-    _id: {
-      $oid: "6606a70a2002727889fc31d4",
-    },
-    name: "Example Palette",
-    palette: {
-      primary: "#007bff",
-      primary_content: "#ffffff",
-      primary_light: "#6ec6ff",
-      primary_dark: "#0056b3",
-      secondary: "#6c757d",
-      secondary_content: "#ffffff",
-      secondary_light: "#b3b9bd",
-      secondary_dark: "#343a40",
-      foreground: "#212529",
-      background: "#ffffff",
-      border: "#ced4da",
-      success: "#28a745",
-      warning: "#ffc107",
-      error: "#dc3545",
-      success_content: "#ffffff",
-      warning_content: "#212529",
-      error_content: "#ffffff",
-      _id: {
-        $oid: "6606a70a2002727889fc31d5",
-      },
-    },
-    owner: "user_2eGjDX5HgkwXKxhQ6NtbwcS0jIv",
-    createdAt: {
-      $date: "2024-03-29T11:33:30.065Z",
-    },
-    updatedAt: {
-      $date: "2024-03-29T11:33:30.065Z",
-    },
-    __v: 0,
-  });
+  const [sampleData, setSampleData] = useState(
+    useSelector((state) => state.palette),
+  );
   return (
     <div>
       <div className="flex w-full px-4 sm:px-6 lg:px-8 justify-between">
         <div className="flex justify-between items-center w-full my-4">
-          <input className="text-2xl font-semibold bg-transparent" value={sampleData.name}/>
+          <input
+            className="text-2xl font-semibold bg-transparent"
+            value={sampleData.name}
+          />
           <Button>Save</Button>
         </div>
       </div>
