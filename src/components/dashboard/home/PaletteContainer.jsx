@@ -1,4 +1,3 @@
-import React from "react";
 import PaletteCard from "@/components/dashboard/home/PaletteCard";
 import { Button } from "@/components/ui/button";
 

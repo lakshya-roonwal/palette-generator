@@ -1,4 +1,5 @@
-import React from "react";
+import CodeBlock from "@/components/CodeBlock";
+import { Button } from "@/components/ui/button";
 import {
   Select,
   SelectContent,
@@ -6,9 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { TabsTrigger, TabsList, TabsContent, Tabs } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import CodeBlock from "@/components/CodeBlock";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const PaletteExport = () => {
   return (

@@ -1,9 +1,9 @@
+import { ClerkProvider } from "@clerk/clerk-react";
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
 import App from "./App.jsx";
 import "./index.css";
-import { Provider } from "react-redux";
-import { ClerkProvider } from "@clerk/clerk-react";
 import store from "./store/store.js";
 
 // Import your publishable key

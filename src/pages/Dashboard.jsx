@@ -1,9 +1,9 @@
 import DashboardNavbar from "@/components/dashboard/DashboardNavbar";
 import PaletteContainer from "@/components/dashboard/home/PaletteContainer";
-import { useClerk } from "@clerk/clerk-react";
-import { Routes, Route } from "react-router-dom";
-import { useState } from "react";
 import SinglePalette from "@/components/dashboard/home/SinglePalette";
+import { useClerk } from "@clerk/clerk-react";
+import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 
 const Dashboard = () => {
   const { user } = useClerk();

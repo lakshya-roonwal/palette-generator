@@ -1,8 +1,6 @@
-import React from "react";
-import { SignedIn, SignedOut } from "@clerk/clerk-react";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { SignInButton } from "@clerk/clerk-react";
+import { SignInButton, SignedIn, SignedOut } from "@clerk/clerk-react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (

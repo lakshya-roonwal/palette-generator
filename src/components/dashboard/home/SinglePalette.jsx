@@ -1,10 +1,9 @@
-import React from "react";
-import { useParams } from "react-router-dom";
-import SinglePaletteNav from "../singlepalette/SinglePaletteNav";
 import { Tabs, TabsContent } from "@/components/ui/tabs";
-import PaletteOverview from "../singlepalette/PaletteOverview";
+import { useParams } from "react-router-dom";
 import PaletteExport from "../singlepalette/PaletteExport";
+import PaletteOverview from "../singlepalette/PaletteOverview";
 import PaletteSettings from "../singlepalette/PaletteSettings";
+import SinglePaletteNav from "../singlepalette/SinglePaletteNav";
 
 const SinglePalette = () => {
   const params = useParams();

@@ -1,16 +1,7 @@
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import {
-  TableHead,
-  TableRow,
-  TableHeader,
-  TableCell,
-  TableBody,
-  Table,
-} from "@/components/ui/table";
-import { Input } from "@/components/ui/input";
-import { Separator } from "@/components/ui/separator";
 import { PopoverPicker } from "@/components/PopoverPicker";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { useState } from "react";
 import { useSelector } from "react-redux";
 
 const PaletteOverview = () => {

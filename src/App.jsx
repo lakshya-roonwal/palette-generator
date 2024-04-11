@@ -1,14 +1,12 @@
 import { RedirectToSignIn, SignedIn, SignedOut } from "@clerk/clerk-react";
+import {
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements
+} from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
-import { Button } from "./components/ui/button";
-import {
-  Routes,
-  Route,
-  createBrowserRouter,
-  createRoutesFromElements,
-  RouterProvider,
-} from "react-router-dom";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
