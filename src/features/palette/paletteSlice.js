@@ -41,17 +41,16 @@ const paletteSlice = createSlice({
   name: "palette",
   initialState: initialState,
   reducers: {
-    // Add your reducer methods here
-    // Example:
-    // updatePaletteColor: (state, action) => {
-    //   state.palette = action.payload;
-    // },
-    // Add more methods as needed
+    changePaletteName: (state, action) => {
+      state.name = action.payload;
+    },
+    changePaletteColor: (state, action) => {
+      const { colorKey, newColor } = action.payload;
+      state.palette[colorKey] = newColor;
+    },
   },
 });
 
-export const {
-  /* Add your action creators here */
-} = paletteSlice.actions;
+export const { changePaletteName, changePaletteColor } = paletteSlice.actions;
 
 export default paletteSlice.reducer;

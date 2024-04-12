@@ -7,6 +7,7 @@ export const PopoverPicker = ({
   onChange,
   width = "100%",
   height = "100%",
+  colorKey,
 }) => {
   const popover = useRef();
   const [isOpen, toggle] = useState(false);
@@ -35,7 +36,10 @@ export const PopoverPicker = ({
           className="absolute left-0 rounded-sm z-20"
           ref={popover}
         >
-          <HexAlphaColorPicker color={color} onChange={onChange} />
+          <HexAlphaColorPicker
+            color={color}
+            onChange={(newColor) => onChange(newColor, colorKey)}
+          />
         </div>
       )}
     </div>

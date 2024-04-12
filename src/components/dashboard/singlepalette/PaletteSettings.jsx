@@ -1,4 +1,3 @@
-
 const PaletteSettings = () => {
   return (
     <main className="flex w-full px-4 sm:px-6 lg:px-8">

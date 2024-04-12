@@ -1,13 +1,25 @@
 import { PopoverPicker } from "@/components/PopoverPicker";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { useState } from "react";
-import { useSelector } from "react-redux";
+import {
+  changePaletteColor,
+  changePaletteName,
+} from "@/features/palette/paletteSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const PaletteOverview = () => {
-  const [sampleData, setSampleData] = useState(
-    useSelector((state) => state.palette),
-  );
+  const dispatch = useDispatch();
+  const sampleData = useSelector((state) => state.palette);
+
+  const handlePaletteNameChange = (e) => {
+    const name = e.target.value;
+    dispatch(changePaletteName(name));
+  };
+  const handlePaletteColorChange = (newColor, colorKey) => {
+    console.log("Key:", colorKey);
+    console.log("Color:", newColor);
+    dispatch(changePaletteColor({ colorKey: colorKey, newColor: newColor }));
+  };
   return (
     <div>
       <div className="flex w-full px-4 sm:px-6 lg:px-8 justify-between">
@@ -15,6 +27,7 @@ const PaletteOverview = () => {
           <input
             className="text-2xl font-semibold bg-transparent"
             value={sampleData.name}
+            onChange={handlePaletteNameChange}
           />
           <Button>Save</Button>
         </div>
@@ -55,6 +68,8 @@ const PaletteOverview = () => {
                               width="30px"
                               height="30px"
                               color={value}
+                              onChange={handlePaletteColorChange}
+                              colorKey={key}
                             />
                             <input
                               type="text"
@@ -96,11 +111,13 @@ const PaletteOverview = () => {
                           className="flex flex-col items-start gap-2 "
                         >
                           <h3 className="font-medium">{key}</h3>
-                          <div className="flex gap-2 max-w-sm items-center space-x-2 border border-gray-300 rounded-lg px-3 py-2 outline-none focus:outline-lime-300">
+                          <div className="flex gap-2 w-fit items-center border border-gray-300 rounded-lg px-3 py-2">
                             <PopoverPicker
                               width="30px"
                               height="30px"
                               color={value}
+                              onChange={handlePaletteColorChange}
+                              colorKey={key}
                             />
                             <input
                               type="text"
@@ -142,11 +159,13 @@ const PaletteOverview = () => {
                           className="flex flex-col items-start gap-2 "
                         >
                           <h3 className="font-medium">{key}</h3>
-                          <div className="flex gap-2 max-w-sm items-center space-x-2 border border-gray-300 rounded-lg px-3 py-2 outline-none focus:outline-lime-300">
+                          <div className="flex gap-2 w-fit items-center border border-gray-300 rounded-lg px-3 py-2">
                             <PopoverPicker
                               width="30px"
                               height="30px"
                               color={value}
+                              onChange={handlePaletteColorChange}
+                              colorKey={key}
                             />
                             <input
                               type="text"
@@ -188,11 +207,13 @@ const PaletteOverview = () => {
                           className="flex flex-col items-start gap-2 "
                         >
                           <h3 className="font-medium">{key}</h3>
-                          <div className="flex gap-2 max-w-sm items-center space-x-2 border border-gray-300 rounded-lg px-3 py-2 outline-none focus:outline-lime-300">
+                          <div className="flex gap-2 w-fit items-center border border-gray-300 rounded-lg px-3 py-2">
                             <PopoverPicker
                               width="30px"
                               height="30px"
                               color={value}
+                              onChange={handlePaletteColorChange}
+                              colorKey={key}
                             />
                             <input
                               type="text"
