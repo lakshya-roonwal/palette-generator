@@ -12,7 +12,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<Home />} />
-      {/* <Route
+      <Route
         path="/dashboard/*"
         element={
           <>
@@ -24,7 +24,7 @@ const router = createBrowserRouter(
             </SignedOut>
           </>
         }
-      /> */}
+      />
     </>,
   ),
 );
