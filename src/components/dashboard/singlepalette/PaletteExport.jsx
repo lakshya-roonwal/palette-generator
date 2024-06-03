@@ -84,54 +84,6 @@ const PaletteExport = () => {
       </div>
 
       {/* Export Through API */}
-      <div>
-        <h2 className="text-xl font-semibold my-2">Through API Call</h2>
-        <div className="space-y-6 overflow-hidden">
-          <Tabs defaultValue="javascript">
-            <TabsList className="flex gap-4">
-              <TabsTrigger value="javascript">JavaScript</TabsTrigger>
-              <TabsTrigger value="python">Python</TabsTrigger>
-            </TabsList>
-            <TabsContent value="javascript">
-              <div className="">
-                <CodeBlock
-                  codeString={`fetch('https://api.example.com/data', {
-                  method: 'POST',
-                  headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Bearer YOUR_ACCESS_TOKEN'
-                  },
-                  body: JSON.stringify({ query: 'example' })
-                })
-                  .then(response => response.json())
-                  .then(data => console.log(data));
-                `}
-                  language={"javascript"}
-                />
-              </div>
-            </TabsContent>
-            <TabsContent value="python">
-              <div className="">
-                <CodeBlock
-                  codeString={`import requests
-                
-                url = 'https://api.example.com/data'
-                headers = {
-                  'Content-Type': 'application/json',
-                  'Authorization': 'Bearer YOUR_ACCESS_TOKEN'
-                }
-                data = { 'query': 'example' }
-                
-                response = requests.post(url, headers=headers, json=data)
-                print(response.json())
-                `}
-                  language={"python"}
-                />
-              </div>
-            </TabsContent>
-          </Tabs>
-        </div>
-      </div>
     </div>
   );
 };

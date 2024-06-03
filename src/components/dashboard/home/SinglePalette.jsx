@@ -16,7 +16,7 @@ const SinglePalette = () => {
         <TabsContent value="overview">
           <PaletteOverview />
         </TabsContent>
-        <TabsContent value="export">
+        <TabsContent value="export">  
           <PaletteExport />
         </TabsContent>
         <TabsContent value="settings">

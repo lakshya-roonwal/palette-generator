@@ -52,7 +52,7 @@ const Home = () => {
           </nav>
           <SignedIn>
             <Button
-              className="mx-2 pointer-events-auto bg-white text-black hover:bg-gray-300"
+              className=" pointer-events-auto mx-2  bg-white text-black hover:bg-gray-300"
               asChild={true}
             >
               <Link to={"/dashboard"}>Dashboard</Link>
@@ -60,11 +60,11 @@ const Home = () => {
           </SignedIn>
           <SignedOut>
             <SignInButton
-              className="mx-2"
+              className="pointer-events-auto mx-2"
               mode="modal"
               redirectUrl="/dashboard"
             >
-              <Button className="pointer-events-auto bg-white text-black hover:bg-gray-300">
+              <Button className=" bg-white text-black hover:bg-gray-300">
                 Sign In
               </Button>
             </SignInButton>
@@ -85,7 +85,7 @@ const Home = () => {
                   className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400"
                   initial={{ opacity: 0, y: 100 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.25 }}
+                  transition={{ delay: 1 }}
                 >
                   Generate beautiful color palettes with a single click.
                 </motion.p>

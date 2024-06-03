@@ -1,6 +1,7 @@
 import { PopoverPicker } from "@/components/PopoverPicker";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { Switch } from "@/components/ui/switch";
 import {
   changePaletteColor,
   changePaletteName,
@@ -20,6 +21,10 @@ const PaletteOverview = () => {
     console.log("Color:", newColor);
     dispatch(changePaletteColor({ colorKey: colorKey, newColor: newColor }));
   };
+  const handlePrimaryColorChange=(newColor)=>{
+    console.log("Color:", newColor);
+    dispatch(changePaletteColor({ colorKey: "primary", newColor: newColor }));
+  }
   return (
     <div>
       <div className="flex w-full px-4 sm:px-6 lg:px-8 justify-between">
@@ -34,8 +39,13 @@ const PaletteOverview = () => {
       </div>
       {/* <Separator /> */}
       <div className="flex flex-col w-full gap-4 p-4 sm:px-6 lg:px-8">
-        <div className="flex items-center">
+        <div className="flex items-center justify-between">
           <h1 className="text-lg font-semibold">Manage Colors</h1>
+          <div className="flex items-center gap-2">
+          <p>Auto Generate from primary color</p>
+          <Switch />
+          </div>
+            
         </div>
         {/* Colors Section */}
         <div>
@@ -48,8 +58,25 @@ const PaletteOverview = () => {
                 </h2>
               </div>
               <div className="grid grid-cols-2 gap-4 md:grid-cols-2 xl:grid-cols-4 grid-flow-row">
+                <div className="flex flex-col items-start gap-2 ">
+                  <h3 className="font-medium">{"primary"}</h3>
+                  <div className="flex gap-2 w-fit items-center border border-gray-300 rounded-lg px-3 py-2">
+                    <PopoverPicker
+                      width="30px"
+                      height="30px"
+                      color={sampleData.palette.primary}
+                      onChange={handlePrimaryColorChange}
+                      colorKey={"primary"}
+                    />
+                    <input
+                      type="text"
+                      className="bg-transparent outline-none w-24 md:w-40"
+                      value={sampleData.palette.primary}
+                    />
+                  </div>
+                </div>
                 {Object.entries(sampleData.palette)
-                  .slice(0, 4)
+                  .slice(1, 4)
                   .map(([key, value]) => {
                     // Exclude non-color properties and ID fields
                     if (
